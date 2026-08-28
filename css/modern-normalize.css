@@ -143,9 +143,7 @@ Correct the inability to style clickable types in iOS and Safari.
 button,
 [type='button'],
 [type='reset'],
-[type='submit'] {
-	-webkit-appearance: button;
-}
+[type='submit']
 
 /**
 Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
@@ -178,7 +176,6 @@ Correct the cursor style of increment and decrement buttons in Safari.
 */
 
 [type='search'] {
-	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
 
