@@ -4,66 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Front-end + Quimica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
+
 <body>
     <nav>
-        <a href="#head">Inicio</a>
-        <a href="">Sobre a serie</a>
-        <a href="">Sobre a Termita</a>
-        <a href="">Prova</a>
-        <a href="">Referencias</a>
+        <a href="#inicio">Início</a>
+        <a href="#obra">A Série</a>
+        <a href="#termita">Termita</a>
+        <a href="#prova">Teste</a>
+        <a href="#referencias">Referências</a>
     </nav>
     
-    <head>
-        <h1>Termita, a mistura pirotecnica que pode derreter aço</h1>
+    <header id="inicio">
         <img src="./assets/header_img.jpg" alt="Logo da serie">
-    </head>
+        <h1>Breaking Bad</h1>
+        <h1>Termita</h1>
+        <h2>-Função Inorgânica-</h2>        
+    </header>
 
     <main>
-        <section id="intro">
+        <section id="obra">
             <h2>Sobre a serie</h2>
-            <figure>
-                <img src="" alt="foto de Walter Branco">
-                <figcaption>O protagonista do seriado</figcaption>
-            </figure>
+            <img src="" alt="foto do Walter White, protagonista da série">
 
-            <p>Obra: Breaaking bad</p>
-            <p>Autor: Vince Gilligan</p>
-            <p>Ano de lançamento: 2008</p>
-            <p>Sinopse: conta a história de Walter White, um professor de química que vira produtor de metanfetamina após descobrir um câncer terminal.</p>
-            <p>Obra escolhida por sua relevância e destaque, e também por seu tema ser química</p>
+            <h2>Breaking Bad</h2>
+            <p>Uma série de televisão produzida pelo roteirista e diretor Vince Gilligan entre 2008 e 2013, conta a história de Walter White, um professor de química que, após descobrir
+               um câncer terminal, vira fabricante e vendedor de metanfetamina para garantir o futuro da sua família.</p>
+            <p>Escolhemos a obra pelo seu destaque e relevância, principalmente no assunto de química.</p>
+
         </section>
 
         <section id="termita">
             <div>
+                <h2>Termita</h2>
                 <p>
-                    apragrafos sobre a termita no mundo
+                    Uma mistura inorgânica composta por Alumínio em Pó (Al) e Óxido de Ferro III (Fe₂O₃), que quando exposta a imensas quantidades de calor sofre uma reação química altamente
+                    exotérmica onde o alumínio é oxidado, formando óxido de alumínio, e o ferro do óxido de ferro III é reduzido formando ferro líquido, pois a reação libera tanta energia
+                    que o ferro funde. O calor liberado pela reação é tanto que a temperatura pode ultrapassar os 3500°C.                    
                 </p>
-                <figure>
-                    <img src="" alt="imagem da termita real">
-                    <figcaption>como a termita se parece de verdade</figcaption>
-                </figure>
+                <img src="" alt="imagem da termita na vida real">
             </div>
 
             <div>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/o_Yd0umS6qs?si=SQ2S3a1df3upc-wL"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
                 <p>
-                    paragrafos sobre o uso na serie
+                    Vídeo que mostra o composto sendo usado na série.
+                    No episódio 7 da primeira temporada, os protagonistas usam o composto para destruir uma fechadura, com o objetivo de arrombar o lugar e roubar elementos químicos.
+                    No mundo real, a reação termita é usada em algumas áreas: Originalmente foi utilizada para consertar soldagens locais (como eixos de locomotivas) sem ter que desmontar as
+                    peças envolvidas. Ainda no âmbito de locomotivas, usa-se também para cortar e soldar rapidamente trilhos ferroviários, sem equipamentos pesados e caros. Já foi usada
+                    também no âmbito militar, onde granadas de termita eram utilizadas para destruir rapidamente equipamentos para que não sejam capturados por forças inimigas.
                 </p>
-                <figure>
-                    <img src="" alt="cena da serie onde ela é usada">
-                    <figcaption>termita sendo usada em breaking bad</figcaption>
-                </figure>
             </div>
         </section>
 
         <section id="prova">
+            <div>
+                <h3>Teste</h3>
+                <p> pergunta1? </p>
+                <label for="altA"> alternativa A </label>
+                <input type="radio" name="p1" value="A" id="altA">
+                
+                <label for="altB"> alternativa B </label>
+                <input type="radio" name="p1" value="B" id="altB">
+                
+                ...
+                
+                <button onclick="corrige()"> corrigir </button>
+            </div>
 
+            <div class="resposta do site">
+            ...
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <div id="referencias"></div>
-        <div id="nós"></div>
+    <script>
+        let corretas = 0;
+        let resposta = document.querySelector(".resposta");
+        
+        function corrige() {
+            let r1 = document.querySelector("input[name='p1']:checked").value;
+            
+            if (r1 == "B") {
+                corretas++;
+                resposta.innerHTML += "resposta correta";
+            }
+            else {
+            "."
+            }
+        }
+    </script>
+
+    <footer id="referencias">
+        <h2> Referências</h2>
+        <li> Wikipédia: Termite. Disponível em: <a href="https://pt.wikipedia.org/wiki/Termite" target="_blank"> </a> </li>
+        <li> IMDB: Breaking Bad. Disponível em: <a href="https://www.imdb.com/pt/title/tt0903747/" target="_blank"> </a> </li>
     </footer>
+
 </body>
 </html>
