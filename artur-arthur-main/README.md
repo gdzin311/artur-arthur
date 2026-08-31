@@ -1,1 +1,0 @@
-Trabalho de quimica e front-end
