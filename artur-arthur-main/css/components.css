@@ -1,0 +1,12 @@
+a {
+    color: var(--cor-link);
+}
+
+img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+
+
