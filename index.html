@@ -99,7 +99,7 @@
                 <input type="radio" name="p2" value="C" id="altC">
                 ...
 
-                <p> A que temperatura a reação da que acon.tece na serie pode chegar </p>
+                <p> A que temperatura a reação da que acontece na serie pode chegar </p>
 
                 <label for="altA"> 67K </label>
                 <input type="radio" name="p3" value="A" id="altA">
@@ -118,7 +118,7 @@
             </div>
 
             <div class="resposta">
-            ...
+
             </div>
         </section>
 
@@ -127,17 +127,16 @@
     <script>
         let corretas = 0;
         let resposta = document.querySelector(".resposta");
+        let gabarito= {p1: "A", p2: "C", p3: "D"};
         
         function corrige() {
             let r1 = document.querySelector("input[name='p1']:checked").value;
-            
-            if (r1 == "B") {
-                corretas++;
-                resposta.innerHTML += "resposta correta";
-            }
-            else {
-            "."
-            }
+            let r2 = document.querySelector("input[name='p2']:checked").value;
+            let r3 = document.querySelector("input[name='p3']:checked").value;
+
+            corretas= (r1 == gabarito.p1) + (r2 == gabarito.p2) + (r3 == gabarito.p3);
+
+            resposta.innerHTML += `<p> Parabens você acertou ${corretas}/3 questões </p>`;
         }
     </script>
 
