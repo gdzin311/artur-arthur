@@ -96,7 +96,7 @@
                 
                 <label for="altC"> 7 episódio da primeira temporada </label>
                 <input type="radio" name="p2" value="C" id="altC">
-                
+
 
                 <p> A que temperatura a reação da que acontece na serie pode chegar </p>
 
@@ -110,7 +110,7 @@
                 <input type="radio" name="p3" value="C" id="altC">
 
                 <label for="altD"> Nenhuma da alternativas </label>
-                <input type="radio" name="p3" value="C" id="altD">
+                <input type="radio" name="p3" value="D" id="altD">
                 
                 <button onclick="corrige()"> corrigir </button>
             </div>
@@ -134,7 +134,7 @@
 
             corretas= (r1 == gabarito.p1) + (r2 == gabarito.p2) + (r3 == gabarito.p3);
 
-            resposta.innerHTML += `<p> Parabens você acertou ${corretas}/3 questões </p>`;
+            resposta.innerHTML = `<p> Parabens você acertou ${corretas}/3 questões </p>`;
         }
     </script>
 
