@@ -1,6 +1,30 @@
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    padding: 5px;
+    background-color: var(--cor-fundo);
+}
+
 #menu {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Garante que o menu fique visível acima do conteúdo ao rolar */
+    z-index: 1000;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: var(--cor-fundo-texto);
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
