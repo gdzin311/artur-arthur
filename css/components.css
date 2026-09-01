@@ -70,8 +70,6 @@ footer a:hover {
     100% { transform: scale(1); }
 }
 
-/* === Seção de Prova / Quiz === */
-
 #prova {
   max-width: 700px;
   margin: 4rem auto;
