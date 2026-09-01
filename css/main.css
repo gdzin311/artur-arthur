@@ -3,3 +3,112 @@
 @import url('base.css');
 @import url('layout.css');
 @import url('components.css');
+
+
+/*tablets*/
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-container nav {
+        gap: 10px;
+    }
+    
+    .nav-container nav a {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .grid-item iframe {
+        height: 200px;
+    }
+    
+    main {
+        padding: 0 20px;
+    }
+}
+
+
+/*celular*/
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+    
+    header h2 {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    .nav-container nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .nav-container nav a {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .grid-item iframe {
+        height: 180px;
+    }
+    
+    main {
+        padding: 0 16px;
+    }
+    
+    footer {
+        padding: 15px;
+        font-size: 0.85rem;
+    }
+    
+    footer h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/*telas grandes*/
+@media (min-width: 1200px) {
+
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    body {
+        font-size: 17px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .grid-item {
+        grid-column: auto;
+    }
+}

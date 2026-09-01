@@ -8,6 +8,56 @@ img {
     height: auto;
 }
 
+header h1 {
+    font-size: 4rem; 
+    margin-bottom: 0.2rem;
+}
+
+header h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+    font-weight: 300;  
+}
+
+#walter {
+    max-width: 300px;
+    margin: 0 auto 20px;
+}
+
+.grid-item img#termita {
+    max-width: 80%;
+    margin: 0 auto; 
+    display: block;
+}
+
+.grid-item h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--cor-link);
+    padding-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: var(--cor-link);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#obra h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#logo {
+  margin-left: 30px;
+}
+
 /*prova*/
 
 .resposta{
