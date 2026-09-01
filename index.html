@@ -60,6 +60,7 @@
             <p>Escolhemos a obra pelo seu destaque e relevância, principalmente no assunto de química.</p>
             
         </section>
+
         <hr>
         <br>
         <br>
@@ -82,7 +83,7 @@
                 </div>
                 
                 <div class = "grid-item">
-                    <img src="./assets/termita.jpg" alt="imagem da termita na vida real" id="termita">
+                    <img src="./assets/termita.jpg" alt="imagem da termita na vida real" id="termita-img">
                 </div>
 
                 <div class = "grid-item">
@@ -174,6 +175,8 @@
 
                 <button onclick="corrige()">Ver resultados</button>
             </div>
+
+            <div></div>
         </section>
 
     </main>
@@ -190,18 +193,26 @@
 
             corretas= (r1 == gabarito.p1) + (r2 == gabarito.p2) + (r3 == gabarito.p3);
 
-            resposta.innerHTML += `<div class="resposta"> <p> Você acertou ${corretas} de 3 questões! </p> </div>`;
+            resposta.innerHTML = `<div class="resposta"> <p> Você acertou ${corretas} de 3 questões! </p> </div>`;
         }
     </script>
 
     <footer id="referencias">
         
         <h2> Referências</h2>
-        <li> Wikipédia: Thermite. Disponível em: <a href="https://pt.wikipedia.org/wiki/Termite" target="_blank">https://pt.wikipedia.org/wiki/Termite</a> </li>
-        <li> IMDB: Breaking Bad. Disponível em: <a href="https://www.imdb.com/pt/title/tt0903747/" target="_blank">https://www.imdb.com/pt/title/tt0903747/</a> </li>
+        <ul>
+            <li> Wikipédia: Thermite. Disponível em: <a href="https://pt.wikipedia.org/wiki/Termite" target="_blank">https://pt.wikipedia.org/wiki/Termite</a> </li>
+            <li> IMDB: Breaking Bad. Disponível em: <a href="https://www.imdb.com/pt/title/tt0903747/" target="_blank">https://www.imdb.com/pt/title/tt0903747/</a> </li>
+        </ul>
+
         <br>
-        <p>Trabalho feito por:</p>
-        <p>Arthur Gonçalves Caçoilo e Artur Guadalupe Duarte Pereira;</p>
+
+        <div>
+            <h2>Feito por:</h2>
+            <p>Arthur Gonçalves Caçoilo</p>
+            <p>Artur Guadalupe Duarte Pereira</p>
+        </div>
+
         <p>Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande
             do Sul, Campos Rio Grande, curso Informática para Internet,
             turma i2;</p>
