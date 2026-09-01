@@ -15,7 +15,7 @@ section {
     scroll-margin-top: calc(6.5rem + 2*var(--border-width)); 
 }
 
-img, picture, video, canvas, svg {
+img, picture, video, canvas, svg, iframe {
   max-width: 100%;
   display: block;
 }

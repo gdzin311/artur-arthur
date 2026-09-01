@@ -59,12 +59,12 @@
         font-size: 1rem;
     }
     
-    .nav-container nav {
+    #menu nav {
         flex-wrap: wrap;
         gap: 8px;
     }
     
-    .nav-container nav a {
+    #menu nav a {
         padding: 8px 12px;
         font-size: 0.8rem;
     }
