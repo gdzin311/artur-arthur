@@ -27,7 +27,7 @@
             <img src="./assets/header_img.jpg" alt="Logo da serie" id="logo">
             <div>
                 <h1>Termita</h1>
-                <h2>-Função Inorgânica-</h2>      
+                <h2>-Função Inorgânica-</h2>     
             </div>
         </div>
         <hr>
@@ -91,49 +91,56 @@
             <div>
                 <h3>Teste seus conhecimentos</h3>
 
-                <p> Qual a composição química da termita? </p>
+                <p>Qual a composição química da termita?</p>
 
-                <label for="altA"> Fe₂O₃ + 2Al </label>
-                <input type="radio" name="p1" value="A" id="altA">
-                
-                <label for="altB"> Fe₃N₂ + Na + L </label>
-                <input type="radio" name="p1" value="B" id="altB">
-                
-                <label for="altC"> Fe₂Be + O₃ </label>
-                <input type="radio" name="p1" value="C" id="altC">
-                
+                <div class="alternativa">
+                    <input type="radio" name="p1" value="A" id="p1-altA">
+                    <label for="p1-altA">Fe₂O₃ + 2Al</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p1" value="B" id="p1-altB">
+                    <label for="p1-altB">Fe₃N₂ + Na + L</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p1" value="C" id="p1-altC">
+                    <label for="p1-altC">Fe₂Be + O₃</label>
+                </div>
 
-                <p> Em qual episódio da série a termita foi usada? </p>
+                <p>Em qual episódio da série a termita foi usada?</p>
 
-                <label for="altA"> Episódio 7 da segunda temporada </label>
-                <input type="radio" name="p2" value="A" id="altA">
-                
-                <label for="altB"> Episódio 6 da primeira temporada </label>
-                <input type="radio" name="p2" value="B" id="altB">
-                
-                <label for="altC"> Episódio 7 da primeira temporada </label>
-                <input type="radio" name="p2" value="C" id="altC">
+                <div class="alternativa">
+                    <input type="radio" name="p2" value="A" id="p2-altA">
+                    <label for="p2-altA">Episódio 7 da segunda temporada</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p2" value="B" id="p2-altB">
+                    <label for="p2-altB">Episódio 6 da primeira temporada</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p2" value="C" id="p2-altC">
+                    <label for="p2-altC">Episódio 7 da primeira temporada</label>
+                </div>
 
+                <p>A que temperatura a reação química da termita pode chegar?</p>
 
-                <p> A que temperatura a reação química da termita pode chegar? </p>
+                <div class="alternativa">
+                    <input type="radio" name="p3" value="A" id="p3-altA">
+                    <label for="p3-altA">67°K</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p3" value="B" id="p3-altB">
+                    <label for="p3-altB">5035°C</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p3" value="C" id="p3-altC">
+                    <label for="p3-altC">3500°F</label>
+                </div>
+                <div class="alternativa">
+                    <input type="radio" name="p3" value="D" id="p3-altD">
+                    <label for="p3-altD">Nenhuma das alternativas</label>
+                </div>
 
-                <label for="altA"> 67°K </label>
-                <input type="radio" name="p3" value="A" id="altA">
-                
-                <label for="altB"> 5035°C </label>
-                <input type="radio" name="p3" value="B" id="altB">
-                
-                <label for="altC"> 3500°F </label>
-                <input type="radio" name="p3" value="C" id="altC">
-
-                <label for="altD"> Nenhuma das alternativas </label>
-                <input type="radio" name="p3" value="D" id="altD">
-                
-                <button onclick="corrige()"> Ver resultados </button>
-            </div>
-
-            <div class="resposta">
-
+                <button onclick="corrige()">Ver resultados</button>
             </div>
         </section>
 
@@ -141,7 +148,7 @@
 
     <script>
         let corretas = 0;
-        let resposta = document.querySelector(".resposta");
+        let resposta = document.querySelector("#prova");
         let gabarito= {p1: "A", p2: "C", p3: "D"};
         
         function corrige() {
@@ -151,7 +158,7 @@
 
             corretas= (r1 == gabarito.p1) + (r2 == gabarito.p2) + (r3 == gabarito.p3);
 
-            resposta.innerHTML = `<p> Você acertou ${corretas} de 3 questões! </p>`;
+            resposta.innerHTML += `<div class="resposta"> <p> Você acertou ${corretas} de 3 questões! </p> </div>`;
         }
     </script>
 

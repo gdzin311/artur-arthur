@@ -8,5 +8,116 @@ img {
     height: auto;
 }
 
+/*prova*/
 
+.resposta{
+    animation: pulsar 2s infinite ease-in-out;
+}
 
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); opacity: 0.9; }
+    100% { transform: scale(1); }
+}
+
+/* === Seção de Prova / Quiz === */
+
+#prova {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  color: var(--cor-texto);
+}
+
+#prova > div {
+  background-color: var(--cor-fundo-texto);
+  border: 1px solid var(--cor-link);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#prova h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+#prova p {
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--cor-texto);
+}
+
+#prova p:first-of-type {
+  margin-top: 0;
+}
+
+/* Cada alternativa (input + label agrupados numa div) */
+#prova .alternativa {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.4rem;
+  background-color: var(--cor-fundo);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#prova .alternativa:hover {
+  border-color: var(--cor-link);
+}
+
+#prova .alternativa input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--cor-link);
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+#prova .alternativa label {
+  cursor: pointer;
+  width: 100%;
+}
+
+#prova .alternativa:has(input:checked) {
+  background-color: var(--cor-link);
+  border-color: var(--cor-link);
+  font-weight: 600;
+}
+
+#prova .alternativa:has(input:checked) label {
+  color: var(--cor-fundo-texto);
+}
+
+#prova button {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.7rem 1.8rem;
+  background-color: var(--cor-link);
+  color: var(--cor-fundo-texto);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#prova button:hover {
+  opacity: 0.85;
+}
+
+#prova .resposta {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--cor-fundo-texto);
+}
