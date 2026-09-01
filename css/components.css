@@ -169,3 +169,13 @@ footer a:hover {
   font-weight: 600;
   color: var(--cor-fundo-texto);
 }
+
+footer{
+    font-size: 11px;
+    text-align: center;
+}
+
+#logo-if{
+  width: 49;
+  height: 77;
+}
